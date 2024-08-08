@@ -1,4 +1,4 @@
-/* @font-face {
+@font-face {
   font-family: "PatuaOne-Regular";
   src: local("PatuaOne-Regular"), url("../PatuaOne-Regular.ttf") format("opentype");
   font-display: swap;
@@ -14,7 +14,7 @@
   font-family: "AlegreyaSans";
   src: local("AlegreyaSans"), url("../AlegreyaSans-Regular.ttf") format("opentype");
   font-display: swap;
-} */
+}
 
 *,
 *::before,
