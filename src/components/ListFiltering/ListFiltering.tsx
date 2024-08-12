@@ -1,10 +1,24 @@
+import styles from "./ListFiltering.module.scss";
+
 export default function ListFiltering() {
   return (
-    <div>
-      <input name="withChildren" type="checkbox" />
-      <input name="birthday" type="checkbox" />
-      <input name="indemnityMonth" type="checkbox" />
-      <input name="indemnityYear" type="checkbox" />
+    <div className={styles.mainContainer}>
+      <label htmlFor="withChildren">
+        <input name="withChildren" type="checkbox" />
+        Klienci z dziećmi.
+      </label>
+      <label htmlFor="birthday">
+        <input name="birthday" type="checkbox" />
+        Klienci obchodzący urodziny.
+      </label>
+      <label htmlFor="indemnityMonth">
+        <input name="indemnityMonth" type="checkbox" />
+        Indemnity miesiąc.
+      </label>
+      <label htmlFor="indemnityYear">
+        <input name="indemnityYear" type="checkbox" />
+        Indemnity rok.
+      </label>
     </div>
   );
 }
