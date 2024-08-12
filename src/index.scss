@@ -16,6 +16,17 @@
   font-display: swap;
 }
 
+#root {
+  --white: hsl(0, 0%, 98%);
+  --black: hsl(0, 0%, 9%);
+  --light-grey: hsl(0, 0%, 89%);
+  --grey: hsl(0, 0%, 81%);
+  --dark-grey: hsl(0, 0%, 29%);
+  --accent-color-green: hsl(69, 74%, 46%);
+  --accent-color-blue: hsl(197, 100%, 40%);
+  --accent-color-teal: hsl(158, 75%, 60%);
+}
+
 *,
 *::before,
 *::after {
@@ -33,12 +44,15 @@ body {
 
 body {
   line-height: 1.3;
+  color: hsl(0, 0%, 9%);
+  background-color: hsl(0, 0%, 98%);
   -webkit-font-smoothing: antialiased;
-  font-family: "PatuaOne-Regular", Lato, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: "Cabin", Lato, system-ui, Avenir, Helvetica, Arial, sans-serif;
   font-synthesis: none;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
+  accent-color: hsl(158, 75%, 60%);
 }
 
 input,
