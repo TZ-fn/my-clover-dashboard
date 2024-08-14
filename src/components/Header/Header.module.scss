@@ -5,7 +5,7 @@
   align-items: center;
   text-align: center;
   padding: 1rem 2rem;
-  border-bottom: 1px solid black;
+  border: 1px solid var(--grey);
   box-shadow: 0 1px 30px hsla(0, 0%, 0%, 0.1);
 
   @media (max-width: 1000px) {
@@ -29,6 +29,7 @@
   font-family: "AlegreyaSans", sans-serif;
   font-size: clamp(2rem, 4vw, 4rem);
   text-wrap: nowrap;
+  align-self: center;
 
   @media (max-width: 1000px) {
     margin-left: 0;
