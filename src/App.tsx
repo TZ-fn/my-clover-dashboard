@@ -1,14 +1,12 @@
 import "./App.css";
 import Header from "./components/Header/Header";
-import ListFiltering from "./components/ListFiltering/ListFiltering";
-import SearchBar from "./components/SearchBar/SearchBar";
+import ListControls from "./components/ListControls/ListControls";
 
 function App() {
   return (
     <>
       <Header />
-      <SearchBar />
-      <ListFiltering />
+      <ListControls />
     </>
   );
 }
