@@ -3,18 +3,32 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 0.5rem;
-  margin-top: 1rem;
+  gap: 0.7rem;
+  margin-bottom: 1rem;
 }
 
 .checkboxesContainer {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 1rem;
+  gap: 2rem;
   font-size: 1.2rem;
 
   input {
-    margin-right: 0.3rem;
+    margin-right: 0.7rem;
+    transform: scale(2);
   }
+
+  @media (max-width: 1350px) {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+.toggleCheckboxesBtn {
+  color: hsl(118, 84%, 34%);
+  font-size: 1.5rem;
+  background-color: transparent;
+  margin-left: 0.5rem;
+  transform: translate(0, 2px);
 }
