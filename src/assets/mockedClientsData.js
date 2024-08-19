@@ -160,7 +160,10 @@ const clients = [
           dob: "13-09-2008",
         },
         {
-          firstName: "Witkor",
+<<<<<<< HEAD
+          firstName: "Wiktor",
+=======
+>>>>>>> d544b5cadf140027053587b2116f54d32cba5d77
           lastName: "Nowicki",
           dob: "01-02-2013",
         },
