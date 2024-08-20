@@ -19,6 +19,10 @@
     transform: scale(2);
   }
 
+  label {
+    user-select: none;
+  }
+
   @media (max-width: 1350px) {
     flex-direction: column;
     align-items: flex-start;
