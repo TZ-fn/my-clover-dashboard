@@ -1,0 +1,558 @@
+[
+  {
+    "firstName": "Anna",
+    "lastName": "Kowalczyk",
+    "dob": "14-03-1985",
+    "address": {
+      "city": "Portsmouth",
+      "rest": "High Street 20"
+    },
+    "phone": "567567567",
+    "email": "anna.kow@test.uk",
+    "products": "product3",
+    "startDate": "22-05-2019",
+    "providers": "provider2",
+    "insuranceSum": "18000",
+    "term": {
+      "startDate": "22-05-2019",
+      "endDate": "22-05-2034"
+    },
+    "indemnityTime": "24 months",
+    "children": [
+      {
+        "firstName": "Maja",
+        "lastName": "Kowalczyk",
+        "dob": "15-05-2014"
+      }
+    ],
+    "broker": "broker3"
+  },
+  {
+    "firstName": "Katarzyna",
+    "lastName": "Wiśniewska",
+    "dob": "10-08-1975",
+    "address": {
+      "city": "London",
+      "rest": "Baker Street 50"
+    },
+    "phone": "654654654",
+    "email": "k.wisniewska@test.co.uk",
+    "products": "product1",
+    "startDate": "01-03-2020",
+    "providers": "provider3",
+    "insuranceSum": "15000",
+    "term": {
+      "startDate": "01-03-2020",
+      "endDate": "01-03-2030"
+    },
+    "indemnityTime": "18 months",
+    "children": [],
+    "broker": "broker1"
+  },
+  {
+    "firstName": "Tomasz",
+    "lastName": "Lewandowski",
+    "dob": "17-11-1980",
+    "address": {
+      "city": "Oxford",
+      "rest": "Main Road 45"
+    },
+    "phone": "789789789",
+    "email": "t.lew@test.uk",
+    "products": "product2",
+    "startDate": "15-07-2021",
+    "providers": "provider1",
+    "insuranceSum": "22000",
+    "term": {
+      "startDate": "15-07-2021",
+      "endDate": "15-07-2036"
+    },
+    "indemnityTime": "12 months",
+    "children": [
+      {
+        "firstName": "Oskar",
+        "lastName": "Lewandowski",
+        "dob": "02-02-2012"
+      }
+    ],
+    "broker": "broker2"
+  },
+  {
+    "firstName": "Marek",
+    "lastName": "Szymanski",
+    "dob": "01-01-1967",
+    "address": {
+      "city": "Manchester",
+      "rest": "Green Lane 12"
+    },
+    "phone": "876876876",
+    "email": "m.szymanski@test.en",
+    "products": "product3",
+    "startDate": "30-09-2017",
+    "providers": "provider2",
+    "insuranceSum": "30000",
+    "term": {
+      "startDate": "30-09-2017",
+      "endDate": "30-09-2037"
+    },
+    "indemnityTime": "24 months",
+    "children": [
+      {
+        "firstName": "Julia",
+        "lastName": "Szymanski",
+        "dob": "23-03-2010"
+      }
+    ],
+    "broker": "broker3"
+  },
+  {
+    "firstName": "Magdalena",
+    "lastName": "Zielinska",
+    "dob": "22-02-1978",
+    "address": {
+      "city": "Bristol",
+      "rest": "Park Avenue 15"
+    },
+    "phone": "543543543",
+    "email": "magda.ziel@test.com",
+    "products": "product1",
+    "startDate": "11-11-2019",
+    "providers": "provider1",
+    "insuranceSum": "20000",
+    "term": {
+      "startDate": "11-11-2019",
+      "endDate": "11-11-2034"
+    },
+    "indemnityTime": "12 months",
+    "children": [
+      {
+        "firstName": "Kuba",
+        "lastName": "Zielinski",
+        "dob": "01-06-2013"
+      }
+    ],
+    "broker": "broker1"
+  },
+  {
+    "firstName": "Robert",
+    "lastName": "Nowicki",
+    "dob": "09-12-1960",
+    "address": {
+      "city": "Southampton",
+      "rest": "Ocean Village 7"
+    },
+    "phone": "123987654",
+    "email": "r.nowicki@test.en",
+    "products": "product2",
+    "startDate": "18-05-2016",
+    "providers": "provider3",
+    "insuranceSum": "25000",
+    "term": {
+      "startDate": "18-05-2016",
+      "endDate": "18-05-2036"
+    },
+    "indemnityTime": "24 months",
+    "children": [
+      {
+        "firstName": "Lena",
+        "lastName": "Nowicka",
+        "dob": "13-09-2008"
+      },
+      {
+        "firstName": "Wiktor",
+        "lastName": "Nowicki",
+        "dob": "01-02-2013"
+      }
+    ],
+    "broker": "broker2"
+  },
+  {
+    "firstName": "Agnieszka",
+    "lastName": "Wójcik",
+    "dob": "30-07-1983",
+    "address": {
+      "city": "Exeter",
+      "rest": "Cathedral Street 22"
+    },
+    "phone": "654321987",
+    "email": "a.wojcik@test.co.uk",
+    "products": "product3",
+    "startDate": "14-08-2020",
+    "providers": "provider2",
+    "insuranceSum": "18000",
+    "term": {
+      "startDate": "14-08-2020",
+      "endDate": "14-08-2035"
+    },
+    "indemnityTime": "12 months",
+    "children": [],
+    "broker": "broker1"
+  },
+  {
+    "firstName": "Wojciech",
+    "lastName": "Pawlowski",
+    "dob": "04-04-1988",
+    "address": {
+      "city": "Liverpool",
+      "rest": "Albert Dock 9"
+    },
+    "phone": "321654987",
+    "email": "w.pawlowski@test.uk",
+    "products": "product1",
+    "startDate": "05-03-2017",
+    "providers": "provider3",
+    "insuranceSum": "22000",
+    "term": {
+      "startDate": "05-03-2017",
+      "endDate": "05-03-2032"
+    },
+    "indemnityTime": "24 months",
+    "children": [
+      {
+        "firstName": "Zuzanna",
+        "lastName": "Pawlowska",
+        "dob": "15-10-2016"
+      }
+    ],
+    "broker": "broker2"
+  },
+  {
+    "firstName": "Ewa",
+    "lastName": "Kozłowska",
+    "dob": "18-09-1982",
+    "address": {
+      "city": "Reading",
+      "rest": "Kings Road 10"
+    },
+    "phone": "789654321",
+    "email": "ewa.koz@test.co.uk",
+    "products": "product2",
+    "startDate": "22-12-2018",
+    "providers": "provider1",
+    "insuranceSum": "25000",
+    "term": {
+      "startDate": "22-12-2018",
+      "endDate": "22-12-2038"
+    },
+    "indemnityTime": "18 months",
+    "children": [
+      {
+        "firstName": "Alicja",
+        "lastName": "Kozłowska",
+        "dob": "27-11-2014"
+      }
+    ],
+    "broker": "broker3"
+  },
+  {
+    "firstName": "Grzegorz",
+    "lastName": "Zając",
+    "dob": "15-05-1970",
+    "address": {
+      "city": "Southampton",
+      "rest": "Millbrook Road 14"
+    },
+    "phone": "456789321",
+    "email": "grzegorz.zajac@test.uk",
+    "products": "product3",
+    "startDate": "25-10-2015",
+    "providers": "provider2",
+    "insuranceSum": "20000",
+    "term": {
+      "startDate": "25-10-2015",
+      "endDate": "25-10-2035"
+    },
+    "indemnityTime": "24 months",
+    "children": [
+      {
+        "firstName": "Mateusz",
+        "lastName": "Zając",
+        "dob": "03-07-2006"
+      }
+    ],
+    "broker": "broker1"
+  },
+  {
+    "firstName": "Michał",
+    "lastName": "Krawczyk",
+    "dob": "12-02-1992",
+    "address": {
+      "city": "Leeds",
+      "rest": "Briggate 18"
+    },
+    "phone": "678543210",
+    "email": "michal.krawczyk@test.com",
+    "products": "product1",
+    "startDate": "06-02-2019",
+    "providers": "provider1",
+    "insuranceSum": "15000",
+    "term": {
+      "startDate": "06-02-2019",
+      "endDate": "06-02-2039"
+    },
+    "indemnityTime": "18 months",
+    "children": [
+      {
+        "firstName": "Dominik",
+        "lastName": "Krawczyk",
+        "dob": "01-12-2015"
+      }
+    ],
+    "broker": "broker2"
+  },
+  {
+    "firstName": "Patrycja",
+    "lastName": "Mazur",
+    "dob": "05-07-1988",
+    "address": {
+      "city": "Sheffield",
+      "rest": "Meadowhall Road 4"
+    },
+    "phone": "789012345",
+    "email": "patrycja.mazur@test.en",
+    "products": "product2",
+    "startDate": "20-09-2021",
+    "providers": "provider3",
+    "insuranceSum": "30000",
+    "term": {
+      "startDate": "20-09-2021",
+      "endDate": "20-09-2041"
+    },
+    "indemnityTime": "24 months",
+    "children": [
+      {
+        "firstName": "Natalia",
+        "lastName": "Mazur",
+        "dob": "02-03-2018"
+      }
+    ],
+    "broker": "broker3"
+  },
+  {
+    "firstName": "Łukasz",
+    "lastName": "Wrona",
+    "dob": "09-11-1975",
+    "address": {
+      "city": "Birmingham",
+      "rest": "Broad Street 21"
+    },
+    "phone": "543210876",
+    "email": "lukasz.wrona@test.co.uk",
+    "products": "product1",
+    "startDate": "14-04-2022",
+    "providers": "provider1",
+    "insuranceSum": "27000",
+    "term": {
+      "startDate": "14-04-2022",
+      "endDate": "14-04-2042"
+    },
+    "indemnityTime": "18 months",
+    "children": [
+      {
+        "firstName": "Antoni",
+        "lastName": "Wrona",
+        "dob": "10-10-2019"
+      },
+      {
+        "firstName": "Aleksander",
+        "lastName": "Wrona",
+        "dob": "02-11-2023"
+      }
+    ],
+    "broker": "broker2"
+  },
+  {
+    "firstName": "Monika",
+    "lastName": "Grabowska",
+    "dob": "20-06-1987",
+    "address": {
+      "city": "Glasgow",
+      "rest": "St. Enoch Square 2"
+    },
+    "phone": "098765432",
+    "email": "monika.grabowska@test.com",
+    "products": "product3",
+    "startDate": "17-12-2020",
+    "providers": "provider2",
+    "insuranceSum": "24000",
+    "term": {
+      "startDate": "17-12-2020",
+      "endDate": "17-12-2040"
+    },
+    "indemnityTime": "24 months",
+    "children": [],
+    "broker": "broker3"
+  },
+  {
+    "firstName": "Andrzej",
+    "lastName": "Stępień",
+    "dob": "27-08-1973",
+    "address": {
+      "city": "Edinburgh",
+      "rest": "Royal Mile 8"
+    },
+    "phone": "876543210",
+    "email": "andrzej.stepien@test.co.uk",
+    "products": "product2",
+    "startDate": "28-02-2018",
+    "providers": "provider1",
+    "insuranceSum": "28000",
+    "term": {
+      "startDate": "28-02-2018",
+      "endDate": "28-02-2043"
+    },
+    "indemnityTime": "18 months",
+    "children": [
+      {
+        "firstName": "Oliwia",
+        "lastName": "Stępień",
+        "dob": "05-08-2012"
+      }
+    ],
+    "broker": "broker1"
+  },
+  {
+    "firstName": "Natalia",
+    "lastName": "Michalak",
+    "dob": "11-03-1990",
+    "address": {
+      "city": "Cardiff",
+      "rest": "Queen Street 9"
+    },
+    "phone": "210987654",
+    "email": "natalia.michalak@test.uk",
+    "products": "product1",
+    "startDate": "10-10-2021",
+    "providers": "provider3",
+    "insuranceSum": "16000",
+    "term": {
+      "startDate": "10-10-2021",
+      "endDate": "10-10-2036"
+    },
+    "indemnityTime": "12 months",
+    "children": [
+      {
+        "firstName": "Wiktoria",
+        "lastName": "Michalak",
+        "dob": "18-06-2015"
+      },
+      {
+        "firstName": "Natalia",
+        "lastName": "Michalak",
+        "dob": "21-03-2009"
+      }
+    ],
+    "broker": "broker2"
+  },
+  {
+    "firstName": "Jakub",
+    "lastName": "Czarnecki",
+    "dob": "13-01-1976",
+    "address": {
+      "city": "Newcastle",
+      "rest": "Quayside 30"
+    },
+    "phone": "543987210",
+    "email": "jakub.czarn@test.com",
+    "products": "product2",
+    "startDate": "07-07-2019",
+    "providers": "provider2",
+    "insuranceSum": "21000",
+    "term": {
+      "startDate": "07-07-2019",
+      "endDate": "07-07-2039"
+    },
+    "indemnityTime": "18 months",
+    "children": [
+      {
+        "firstName": "Filip",
+        "lastName": "Czarnecki",
+        "dob": "21-09-2009"
+      }
+    ],
+    "broker": "broker1"
+  },
+  {
+    "firstName": "Dawid",
+    "lastName": "Gajda",
+    "dob": "03-06-1989",
+    "address": {
+      "city": "Nottingham",
+      "rest": "Market Square 11"
+    },
+    "phone": "109876543",
+    "email": "dawid.gajda@test.uk",
+    "products": "product3",
+    "startDate": "03-01-2021",
+    "providers": "provider3",
+    "insuranceSum": "19000",
+    "term": {
+      "startDate": "03-01-2021",
+      "endDate": "03-01-2041"
+    },
+    "indemnityTime": "12 months",
+    "children": [
+      {
+        "firstName": "Nadia",
+        "lastName": "Gajda",
+        "dob": "07-04-2013"
+      }
+    ],
+    "broker": "broker2"
+  },
+  {
+    "firstName": "Dorota",
+    "lastName": "Rogowska",
+    "dob": "21-12-1981",
+    "address": {
+      "city": "Cambridge",
+      "rest": "Silver Street 14"
+    },
+    "phone": "432109876",
+    "email": "dorota.rogowska@test.co.uk",
+    "products": "product2",
+    "startDate": "19-04-2022",
+    "providers": "provider1",
+    "insuranceSum": "24000",
+    "term": {
+      "startDate": "19-04-2022",
+      "endDate": "19-04-2042"
+    },
+    "indemnityTime": "24 months",
+    "children": [
+      {
+        "firstName": "Kacper",
+        "lastName": "Rogowski",
+        "dob": "05-01-2008"
+      },
+      {
+        "firstName": "Artur",
+        "lastName": "Rogowski",
+        "dob": "12-09-2012"
+      }
+    ],
+    "broker": "broker3"
+  },
+  {
+    "firstName": "Piotr",
+    "lastName": "Kaleta",
+    "dob": "08-10-1972",
+    "address": {
+      "city": "Bath",
+      "rest": "Abbey Street 5"
+    },
+    "phone": "321098765",
+    "email": "piotr.kaleta@test.en",
+    "products": "product1",
+    "startDate": "21-11-2018",
+    "providers": "provider2",
+    "insuranceSum": "28000",
+    "term": {
+      "startDate": "21-11-2018",
+      "endDate": "21-11-2038"
+    },
+    "indemnityTime": "18 months",
+    "children": [],
+    "broker": "broker1"
+  }
+]
