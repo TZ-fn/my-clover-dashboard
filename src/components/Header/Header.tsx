@@ -1,4 +1,5 @@
 import mainLogo from "../../assets/mainLogo.webp";
+import DataLoaderInput from "../DataLoaderInput/DataLoaderInput";
 import styles from "./Header.module.scss";
 
 export default function Header() {
@@ -10,6 +11,7 @@ export default function Header() {
         </div>
       </a>
       <h1 className={styles.mainHeaderText}>🍀 Lista klientów 🍀</h1>
+      <DataLoaderInput />
     </header>
   );
 }

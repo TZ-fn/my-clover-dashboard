@@ -1,0 +1,27 @@
+.fileInput {
+  width: 15rem;
+
+  &::-webkit-file-upload-button {
+    visibility: hidden;
+  }
+
+  &::before {
+    content: "Wczytaj dane klientów";
+    display: inline-block;
+    border: 2px solid #db7878;
+    background-color: var(--white);
+    border-radius: 3px;
+    padding: 10px 16px;
+    outline: none;
+    white-space: nowrap;
+    user-select: none;
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 1.3rem;
+    transition: all 0.1s ease-in-out;
+  }
+
+  &:hover::before {
+    background-color: #ececec;
+  }
+}
