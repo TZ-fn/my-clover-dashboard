@@ -1,12 +1,18 @@
-.fileInput {
-  width: 15rem;
+.mainContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+.fileInput,
+.fileInputLoaded {
+  width: 18rem;
 
   &::-webkit-file-upload-button {
     visibility: hidden;
   }
 
   &::before {
-    content: "Wczytaj dane klientów";
+    content: "Wczytaj dane klientów ❌";
     display: inline-block;
     border: 2px solid #db7878;
     background-color: var(--white);
@@ -24,4 +30,15 @@
   &:hover::before {
     background-color: #ececec;
   }
+}
+
+.fileInputLoaded {
+  &::before {
+    content: "Dane klientów wczytane ✔️";
+    border: 2px solid var(--accent-color-green);
+  }
+}
+
+.statusMessage {
+  margin-top: 0.5rem;
 }

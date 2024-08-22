@@ -18,10 +18,12 @@ export default function DataLoaderInput() {
   }
 
   return (
-    <div>
-      <input onChange={(e) => handleChange(e.target.files[0])} className={styles.fileInput} type="file" />
-      <button onClick={() => console.log(data)}>123</button>
-      {data ? <p>Baza klientów została wczytana.</p> : null}
+    <div className={styles.mainContainer}>
+      <input
+        onChange={(e) => handleChange(e.target.files[0])}
+        className={data ? styles.fileInputLoaded : styles.fileInput}
+        type="file"
+      />
     </div>
   );
 }
