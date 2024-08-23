@@ -3,37 +3,31 @@
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   text-align: center;
   padding: 1rem 2rem;
   border: 1px solid var(--grey);
-  box-shadow: 0 1px 30px hsla(0, 0%, 0%, 0.1);
+  box-shadow: 0 2px 30px hsla(0, 0%, 0%, 0.15);
 
   @media (max-width: 1000px) {
     flex-direction: column;
     justify-content: center;
-    gap: 1.5rem;
+    gap: 1rem;
   }
 }
 
 .mainLogoContainer {
   width: clamp(12rem, 20vw, 21rem);
-  margin-left: 0;
   background-color: #fefefe;
-
-  @media (max-width: 1000px) {
-    margin-bottom: 1rem;
-  }
 }
 
 .mainHeaderText {
-  margin-left: 25%;
   font-family: "AlegreyaSans", sans-serif;
   font-size: clamp(2rem, 4vw, 4rem);
   text-wrap: nowrap;
-  align-self: center;
+  margin: 0 auto;
 
   @media (max-width: 1000px) {
-    margin-left: 0;
+    margin: unset;
   }
 }
