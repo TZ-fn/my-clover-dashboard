@@ -1,16 +1,15 @@
 .mainContainer {
   display: flex;
   flex-direction: column;
+  margin-right: 0;
+}
+
+.input {
+  display: none;
 }
 
 .fileInput,
 .fileInputLoaded {
-  width: 18rem;
-
-  &::-webkit-file-upload-button {
-    visibility: hidden;
-  }
-
   &::before {
     content: "Wczytaj dane klientów ❌";
     display: inline-block;
@@ -23,7 +22,7 @@
     user-select: none;
     cursor: pointer;
     font-weight: 700;
-    font-size: 1.3rem;
+    font-size: clamp(1rem, 3vw, 1.4rem);
     transition: all 0.1s ease-in-out;
   }
 
@@ -37,8 +36,4 @@
     content: "Dane klientów wczytane ✔️";
     border: 2px solid var(--accent-color-green);
   }
-}
-
-.statusMessage {
-  margin-top: 0.5rem;
 }

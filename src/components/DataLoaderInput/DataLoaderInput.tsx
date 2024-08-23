@@ -1,8 +1,9 @@
-import { useState } from "react";
+import { useId, useState } from "react";
 import styles from "./DataLoaderInput.module.scss";
 
 export default function DataLoaderInput() {
   const [data, setData] = useState();
+  const fileInputId = useId();
 
   let fileReader: FileReader;
 
@@ -19,11 +20,15 @@ export default function DataLoaderInput() {
 
   return (
     <div className={styles.mainContainer}>
-      <input
-        onChange={(e) => handleChange(e.target.files[0])}
-        className={data ? styles.fileInputLoaded : styles.fileInput}
-        type="file"
-      />
+      <label className={data ? styles.fileInputLoaded : styles.fileInput} htmlFor={fileInputId}>
+        <input
+          className={styles.input}
+          onChange={(e) => handleChange(e.target.files![0])}
+          type="file"
+          accept=".json"
+          id={fileInputId}
+        />
+      </label>
     </div>
   );
 }
