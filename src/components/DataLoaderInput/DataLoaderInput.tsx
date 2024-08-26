@@ -1,15 +1,18 @@
-import { useId, useState } from "react";
+import { useContext, useId } from "react";
 import styles from "./DataLoaderInput.module.scss";
+import ClientsDataContext from "../../context/ClientsDataContext";
 
 export default function DataLoaderInput() {
-  const [data, setData] = useState();
   const fileInputId = useId();
+  const { clientsData, setClientsData } = useContext(ClientsDataContext);
 
   let fileReader: FileReader;
 
   function handleFileRead() {
     const content = fileReader.result;
-    setData(JSON.parse(content as string));
+    if (setClientsData) {
+      setClientsData(JSON.parse(content as string));
+    }
   }
 
   function handleChange(file: Blob) {
@@ -20,7 +23,7 @@ export default function DataLoaderInput() {
 
   return (
     <div className={styles.mainContainer}>
-      <label className={data ? styles.fileInputLoaded : styles.fileInput} htmlFor={fileInputId}>
+      <label className={clientsData ? styles.fileInputLoaded : styles.fileInput} htmlFor={fileInputId}>
         <input
           className={styles.input}
           onChange={(e) => handleChange(e.target.files![0])}

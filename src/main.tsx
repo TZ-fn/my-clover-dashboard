@@ -1,10 +1,13 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import App from "./App.tsx";
+import ClientsDataProvider from "./providers/ClientsDataProvider.tsx";
 import "./index.scss";
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
-    <App />
+    <ClientsDataProvider>
+      <App />
+    </ClientsDataProvider>
   </React.StrictMode>
 );
