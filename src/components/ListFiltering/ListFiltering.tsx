@@ -21,7 +21,7 @@ export default function ListFiltering() {
           </label>
           <label htmlFor="birthday">
             <input id="birthday" type="checkbox" />
-            Klienci obchodzący urodziny
+            Klienci obchodzący dziś urodziny
           </label>
           <label htmlFor="indemnityMonth">
             <input id="indemnityMonth" type="checkbox" />
