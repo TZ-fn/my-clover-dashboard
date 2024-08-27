@@ -1,0 +1,31 @@
+.listContainer {
+  width: 100%;
+  margin: 1rem 0;
+  display: grid;
+  place-content: center;
+}
+
+.table {
+  border-collapse: collapse;
+
+  tr:hover {
+    td {
+      background-color: hsl(158, 75%, 80%);
+    }
+  }
+
+  tr:nth-of-type(even) {
+    background-color: hsl(158, 75%, 95%);
+  }
+
+  td {
+    padding: 0.5vw 1vw;
+    text-align: center;
+    border: 1px solid var(--grey);
+  }
+}
+
+.tableHeadCell {
+  padding: 0.7vw 1.4vw;
+  border: 1px solid var(--grey);
+}
