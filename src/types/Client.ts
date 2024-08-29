@@ -1,10 +1,10 @@
-interface Child {
+export interface Child {
   firstName: string;
   lastName: string;
   dob: string;
 }
 
-interface Client {
+export interface Client {
   firstName: string;
   lastName: string;
   dob: string;
@@ -26,5 +26,3 @@ interface Client {
   children: Child[];
   broker: string;
 }
-
-export default Client;

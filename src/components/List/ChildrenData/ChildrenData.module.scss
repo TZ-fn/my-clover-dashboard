@@ -1,0 +1,14 @@
+.innerTable {
+  width: 100%;
+
+  tr:nth-of-type(even) {
+    background-color: inherit;
+  }
+}
+
+.toggleVisBtn {
+  text-align: center;
+  font-size: 1.3rem;
+  color: hsl(118, 84%, 34%);
+  background-color: transparent;
+}

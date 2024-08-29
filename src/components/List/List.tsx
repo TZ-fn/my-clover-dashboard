@@ -2,6 +2,7 @@ import { useContext } from "react";
 import ClientsDataContext from "../../context/ClientsDataContext.js";
 import formatCurrency from "../../utilities/formatCurrency.js";
 import styles from "./List.module.scss";
+import ChildrenData from "./ChildrenData/ChildrenData.js";
 
 export default function List() {
   const { clientsData } = useContext(ClientsDataContext);
@@ -48,15 +49,7 @@ export default function List() {
                   <td>{formatCurrency(Number(client.insuranceSum))}</td>
                   <td>{client.indemnityTime}</td>
                   <td>{client.broker}</td>
-                  <td>
-                    {client.children.map((children) => (
-                      <tr>
-                        <td>
-                          {children.firstName} {children.lastName}, {children.dob}
-                        </td>
-                      </tr>
-                    ))}
-                  </td>
+                  {client.children && <ChildrenData children={client.children} />}
                 </tr>
               );
             })}
