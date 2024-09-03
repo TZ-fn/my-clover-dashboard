@@ -1,5 +1,5 @@
 import { createContext } from "react";
-import Client from "../types/Client";
+import { Client } from "../types/Client";
 
 const ClientsDataContext = createContext<{
   clientsData: Client[] | null;

@@ -1,11 +1,32 @@
 import { useContext } from "react";
 import ClientsDataContext from "../../context/ClientsDataContext.js";
 import formatCurrency from "../../utilities/formatCurrency.js";
-import styles from "./List.module.scss";
 import ChildrenData from "./ChildrenData/ChildrenData.js";
+import ListFilteringContext from "../../context/ListFilteringContext.js";
+import { ListFilteringSettings } from "../../types/ListFiltering.js";
+import { Client } from "../../types/Client.js";
+import formatDoB from "../../utilities/formatDoB.js";
+import styles from "./List.module.scss";
 
 export default function List() {
   const { clientsData } = useContext(ClientsDataContext);
+  const { listFiltering } = useContext(ListFilteringContext);
+
+  function filterClients(clients: Client[], filteringSettings: ListFilteringSettings) {
+    console.log(filteringSettings);
+    return clients.filter((client) => {
+      if (filteringSettings.clientsChildren) {
+        return client.children.length > 0;
+      }
+      if (filteringSettings.clientsBirthDay) {
+        return Number(Date.parse(formatDoB(client.dob))) === Date.now();
+      } else {
+        return clients;
+      }
+    });
+  }
+
+  console.log(new Date());
 
   return (
     <div className={styles.listContainer}>
@@ -29,7 +50,7 @@ export default function List() {
             </tr>
           </thead>
           <tbody>
-            {clientsData.map((client) => {
+            {filterClients(clientsData, listFiltering).map((client) => {
               return (
                 <tr key={`${client.firstName}${client.lastName}`}>
                   <td>

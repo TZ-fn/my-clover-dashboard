@@ -1,18 +1,17 @@
-import { useContext, useEffect, useState } from "react";
-import ClientsDataContext from "../../context/ClientsDataContext";
-import { Client } from "../../types/Client";
+import { ChangeEvent, useContext, useState } from "react";
+import ListFilteringContext from "../../context/ListFilteringContext";
 import styles from "./ListFiltering.module.scss";
 
 export default function ListFiltering() {
   const [areCheckboxesVisible, setAreCheckboxesVisible] = useState(false);
-  const { clientsData, setClientsData } = useContext(ClientsDataContext);
-  const [filteredClientsData, setFilteredClientsData] = useState<Client[] | null>(null);
+  const { listFiltering, setListFiltering } = useContext(ListFilteringContext);
 
-  useEffect(() => {
-    setFilteredClientsData(clientsData);
-  }, [clientsData]);
-
-  function handleInputs(e) {
+  function handleInputs(e: ChangeEvent<HTMLInputElement>) {
+    if (setListFiltering) {
+      if (e.target.id === "withChildren") {
+        setListFiltering({ ...listFiltering, clientsChildren: !listFiltering.clientsChildren });
+      }
+    }
     console.log(e.target.id);
   }
 
