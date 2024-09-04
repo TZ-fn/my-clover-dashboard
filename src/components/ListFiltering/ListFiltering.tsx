@@ -11,8 +11,10 @@ export default function ListFiltering() {
       if (e.target.id === "withChildren") {
         setListFiltering({ ...listFiltering, clientsChildren: !listFiltering.clientsChildren });
       }
+      if (e.target.id === "birthday") {
+        setListFiltering({ ...listFiltering, clientsBirthDay: !listFiltering.clientsBirthDay });
+      }
     }
-    console.log(e.target.id);
   }
 
   return (
@@ -26,13 +28,13 @@ export default function ListFiltering() {
 
       {areCheckboxesVisible && (
         <div className={styles.checkboxesContainer}>
-          <label htmlFor="withChildren">
-            <input onChange={(e) => handleInputs(e)} id="withChildren" type="checkbox" />
-            Klienci z dziećmi
-          </label>
           <label htmlFor="birthday">
             <input onChange={(e) => handleInputs(e)} id="birthday" type="checkbox" />
             Klienci obchodzący dziś urodziny
+          </label>
+          <label htmlFor="withChildren">
+            <input onChange={(e) => handleInputs(e)} id="withChildren" type="checkbox" />
+            Klienci z dziećmi
           </label>
           <label htmlFor="indemnityMonth">
             <input onChange={(e) => handleInputs(e)} id="indemnityMonth" type="checkbox" />

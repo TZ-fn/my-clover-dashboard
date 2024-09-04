@@ -7,26 +7,23 @@ import { ListFilteringSettings } from "../../types/ListFiltering.js";
 import { Client } from "../../types/Client.js";
 import formatDoB from "../../utilities/formatDoB.js";
 import styles from "./List.module.scss";
+import checkForBirthday from "../../utilities/checkForBirthday.js";
 
 export default function List() {
   const { clientsData } = useContext(ClientsDataContext);
   const { listFiltering } = useContext(ListFilteringContext);
 
   function filterClients(clients: Client[], filteringSettings: ListFilteringSettings) {
-    console.log(filteringSettings);
     return clients.filter((client) => {
+      if (filteringSettings.clientsBirthDay) {
+        return checkForBirthday(new Date(formatDoB(client.dob)).toDateString(), new Date(Date.now()).toDateString());
+      }
       if (filteringSettings.clientsChildren) {
         return client.children.length > 0;
       }
-      if (filteringSettings.clientsBirthDay) {
-        return Number(Date.parse(formatDoB(client.dob))) === Date.now();
-      } else {
-        return clients;
-      }
+      return clients;
     });
   }
-
-  console.log(new Date());
 
   return (
     <div className={styles.listContainer}>
