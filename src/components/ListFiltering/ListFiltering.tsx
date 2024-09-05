@@ -20,32 +20,30 @@ export default function ListFiltering() {
   return (
     <div className={styles.mainContainer}>
       <h3>
-        Filtrowanie klientów{" "}
+        Filtrowanie klientów
         <button className={styles.toggleCheckboxesBtn} onClick={() => setAreCheckboxesVisible(!areCheckboxesVisible)}>
           {areCheckboxesVisible ? "▲" : "▼"}
         </button>
       </h3>
 
-      {areCheckboxesVisible && (
-        <div className={styles.checkboxesContainer}>
-          <label htmlFor="birthday">
-            <input onChange={(e) => handleInputs(e)} id="birthday" type="checkbox" />
-            Klienci obchodzący dziś urodziny
-          </label>
-          <label htmlFor="withChildren">
-            <input onChange={(e) => handleInputs(e)} id="withChildren" type="checkbox" />
-            Klienci z dziećmi
-          </label>
-          <label htmlFor="indemnityMonth">
-            <input onChange={(e) => handleInputs(e)} id="indemnityMonth" type="checkbox" />
-            Indemnity miesiąc
-          </label>
-          <label htmlFor="indemnityYear">
-            <input onChange={(e) => handleInputs(e)} id="indemnityYear" type="checkbox" />
-            Indemnity rok
-          </label>
-        </div>
-      )}
+      <div className={areCheckboxesVisible ? styles.checkboxesContainer : styles.checkboxesContainerHidden}>
+        <label htmlFor="birthday">
+          <input onChange={(e) => handleInputs(e)} id="birthday" type="checkbox" />
+          Klienci obchodzący dziś urodziny
+        </label>
+        <label htmlFor="withChildren">
+          <input onChange={(e) => handleInputs(e)} id="withChildren" type="checkbox" />
+          Klienci z dziećmi
+        </label>
+        <label htmlFor="indemnityMonth">
+          <input onChange={(e) => handleInputs(e)} id="indemnityMonth" type="checkbox" />
+          Indemnity miesiąc
+        </label>
+        <label htmlFor="indemnityYear">
+          <input onChange={(e) => handleInputs(e)} id="indemnityYear" type="checkbox" />
+          Indemnity rok
+        </label>
+      </div>
     </div>
   );
 }
