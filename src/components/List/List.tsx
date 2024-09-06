@@ -15,6 +15,12 @@ export default function List() {
 
   function filterClients(clients: Client[], filteringSettings: ListFilteringSettings) {
     return clients.filter((client) => {
+      if (filteringSettings.searchQuery.length > 0) {
+        return (
+          client.firstName.includes(filteringSettings.searchQuery) ||
+          client.lastName.includes(filteringSettings.searchQuery)
+        );
+      }
       if (filteringSettings.clientsBirthDay) {
         return checkForBirthday(new Date(formatDoB(client.dob)).toDateString(), new Date(Date.now()).toDateString());
       }

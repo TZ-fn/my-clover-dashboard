@@ -1,4 +1,5 @@
 export interface ListFilteringSettings {
-  clientsChildren: boolean;
+  searchQuery: string;
   clientsBirthDay: boolean;
+  clientsChildren: boolean;
 }

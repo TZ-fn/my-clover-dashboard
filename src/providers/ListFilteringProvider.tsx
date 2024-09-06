@@ -6,7 +6,11 @@ interface ListFilteringProviderProps {
 }
 
 export default function ListFilteringProvider({ children }: ListFilteringProviderProps) {
-  const [listFiltering, setListFiltering] = useState({ clientsChildren: false, clientsBirthDay: false });
+  const [listFiltering, setListFiltering] = useState({
+    searchQuery: "",
+    clientsChildren: false,
+    clientsBirthDay: false,
+  });
 
   const listFilteringContext = { listFiltering, setListFiltering };
 

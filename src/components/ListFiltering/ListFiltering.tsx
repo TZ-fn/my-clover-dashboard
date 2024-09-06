@@ -8,11 +8,11 @@ export default function ListFiltering() {
 
   function handleInputs(e: ChangeEvent<HTMLInputElement>) {
     if (setListFiltering) {
-      if (e.target.id === "withChildren") {
-        setListFiltering({ ...listFiltering, clientsChildren: !listFiltering.clientsChildren });
-      }
       if (e.target.id === "birthday") {
         setListFiltering({ ...listFiltering, clientsBirthDay: !listFiltering.clientsBirthDay });
+      }
+      if (e.target.id === "withChildren") {
+        setListFiltering({ ...listFiltering, clientsChildren: !listFiltering.clientsChildren });
       }
     }
   }
