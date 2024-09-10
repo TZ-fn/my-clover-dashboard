@@ -16,7 +16,6 @@ export default function List() {
   function filterClients(clients: Client[], filteringSettings: ListFilteringSettings) {
     return clients.filter((client) => {
       if (filteringSettings.searchQuery.length > 0) {
-        console.log(filteringSettings.searchQuery);
         return (
           client.firstName.toLocaleLowerCase().includes(filteringSettings.searchQuery) ||
           client.lastName.toLocaleLowerCase().includes(filteringSettings.searchQuery)
