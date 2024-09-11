@@ -1,0 +1,17 @@
+.container {
+  display: flex;
+  gap: 2rem;
+  margin: 2rem;
+}
+
+.paginationBtn {
+  background-color: transparent;
+  transform: scale(2);
+  border: 1px solid var(--grey);
+  border-radius: 50%;
+  cursor: pointer;
+
+  svg {
+    fill: hsl(118, 84%, 34%);
+  }
+}
