@@ -10,8 +10,13 @@
   border: 1px solid var(--grey);
   border-radius: 50%;
   cursor: pointer;
+  transition: all 0.3s ease-in-out;
 
   svg {
-    fill: hsl(118, 84%, 34%);
+    fill: var(--accent-color-vgreen);
+  }
+
+  &:hover {
+    border-color: var(--accent-color-vgreen);
   }
 }

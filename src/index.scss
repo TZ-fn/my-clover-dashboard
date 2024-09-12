@@ -23,6 +23,7 @@
   --grey: hsl(0, 0%, 81%);
   --dark-grey: hsl(0, 0%, 29%);
   --accent-color-green: hsl(69, 74%, 46%);
+  --accent-color-vgreen: hsl(118, 84%, 34%);
   --accent-color-blue: hsl(197, 100%, 40%);
   --accent-color-teal: hsl(158, 75%, 60%);
 }
@@ -52,7 +53,6 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
-  accent-color: hsl(158, 75%, 60%);
 }
 
 input,
