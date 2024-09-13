@@ -3,4 +3,5 @@ export interface ListFilteringSettings {
   clientsBirthDay: boolean;
   clientsChildren: boolean;
   currentPage: number;
+  numberOfPages: number;
 }
