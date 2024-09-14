@@ -12,6 +12,12 @@
   cursor: pointer;
   transition: all 0.3s ease-in-out;
 
+  &:disabled {
+    filter: grayscale(1);
+    cursor: not-allowed;
+    border-color: var(--grey) !important;
+  }
+
   svg {
     fill: var(--accent-color-vgreen);
   }

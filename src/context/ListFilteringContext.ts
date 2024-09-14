@@ -8,8 +8,9 @@ const ListFilteringContext = createContext<{
       searchQuery: string;
       clientsChildren: boolean;
       clientsBirthDay: boolean;
+      currentPage: number;
     }>
   >;
-}>({ listFiltering: { searchQuery: "", clientsChildren: false, clientsBirthDay: false } });
+}>({ listFiltering: { searchQuery: "", clientsChildren: false, clientsBirthDay: false, currentPage: 1 } });
 
 export default ListFilteringContext;

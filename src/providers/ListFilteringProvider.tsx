@@ -10,6 +10,7 @@ export default function ListFilteringProvider({ children }: ListFilteringProvide
     searchQuery: "",
     clientsChildren: false,
     clientsBirthDay: false,
+    currentPage: 1,
   });
 
   const listFilteringContext = { listFiltering, setListFiltering };
