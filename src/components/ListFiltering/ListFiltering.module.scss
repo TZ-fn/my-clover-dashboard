@@ -20,11 +20,17 @@
     margin-right: 0.7rem;
     transform: scale(2);
     accent-color: var(--accent-color-vgreen);
+    cursor: pointer;
   }
 
   label {
     user-select: none;
     text-wrap: nowrap;
+    cursor: pointer;
+
+    &:hover {
+      color: var(--accent-color-vgreen);
+    }
   }
 
   @media (max-width: 730px) {
