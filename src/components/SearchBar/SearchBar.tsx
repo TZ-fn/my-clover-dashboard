@@ -8,9 +8,7 @@ export default function SearchBar() {
 
   function handleSearch(e: ChangeEvent<HTMLInputElement>) {
     setSearchValue(e.target.value.toLocaleLowerCase());
-    if (setListFiltering) {
-      setListFiltering({ ...listFiltering, searchQuery: e.target.value.toLocaleLowerCase() });
-    }
+    setListFiltering!({ ...listFiltering, searchQuery: e.target.value.toLocaleLowerCase() });
   }
 
   return (

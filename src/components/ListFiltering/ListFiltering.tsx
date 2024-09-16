@@ -7,13 +7,11 @@ export default function ListFiltering() {
   const { listFiltering, setListFiltering } = useContext(ListFilteringContext);
 
   function handleInputs(e: ChangeEvent<HTMLInputElement>) {
-    if (setListFiltering) {
-      if (e.target.id === "birthday") {
-        setListFiltering({ ...listFiltering, clientsBirthDay: !listFiltering.clientsBirthDay });
-      }
-      if (e.target.id === "withChildren") {
-        setListFiltering({ ...listFiltering, clientsChildren: !listFiltering.clientsChildren });
-      }
+    if (e.target.id === "birthday") {
+      setListFiltering!({ ...listFiltering, clientsBirthDay: !listFiltering.clientsBirthDay });
+    }
+    if (e.target.id === "withChildren") {
+      setListFiltering!({ ...listFiltering, clientsChildren: !listFiltering.clientsChildren });
     }
   }
 
