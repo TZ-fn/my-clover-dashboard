@@ -11,6 +11,7 @@ export default function ListFilteringProvider({ children }: ListFilteringProvide
     clientsChildren: false,
     clientsBirthDay: false,
     currentPage: 1,
+    numberOfPages: 1,
   });
 
   const listFilteringContext = { listFiltering, setListFiltering };

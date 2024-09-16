@@ -21,9 +21,13 @@ export default function PaginationControl() {
         </svg>
       </button>
       <p>
-        Strona: {listFiltering.currentPage} z {listFiltering.currentPage}
+        Strona: {listFiltering.currentPage} z {listFiltering.numberOfPages}
       </p>
-      <button className={styles.paginationBtn} onClick={() => changeCurrentPage(1)}>
+      <button
+        disabled={listFiltering.currentPage === listFiltering.numberOfPages}
+        className={styles.paginationBtn}
+        onClick={() => changeCurrentPage(1)}
+      >
         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24">
           <path d="M9.293 8.707 12.586 12l-3.293 3.293 1.414 1.414L15.414 12l-4.707-4.707-1.414 1.414z" />
         </svg>
