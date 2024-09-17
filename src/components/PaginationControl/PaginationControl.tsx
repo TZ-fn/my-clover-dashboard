@@ -20,9 +20,11 @@ export default function PaginationControl() {
           <path d="M13.293 7.293 8.586 12l4.707 4.707 1.414-1.414L11.414 12l3.293-3.293-1.414-1.414z" />
         </svg>
       </button>
-      <p>
-        Strona: {listFiltering.currentPage} z {listFiltering.numberOfPages}
-      </p>
+      {listFiltering.numberOfPages > 0 && (
+        <p>
+          Strona: {listFiltering.currentPage} z {listFiltering.numberOfPages}
+        </p>
+      )}
       <button
         disabled={listFiltering.currentPage === listFiltering.numberOfPages}
         className={styles.paginationBtn}
