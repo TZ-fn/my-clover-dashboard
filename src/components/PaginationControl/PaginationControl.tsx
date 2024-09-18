@@ -12,7 +12,7 @@ export default function PaginationControl() {
   return (
     <div className={styles.container}>
       <button
-        disabled={listFiltering.currentPage === 1}
+        disabled={listFiltering.currentPage === 1 || listFiltering.numberOfPages === 0}
         className={styles.paginationBtn}
         onClick={() => changeCurrentPage(-1)}
       >
@@ -26,7 +26,7 @@ export default function PaginationControl() {
         </p>
       )}
       <button
-        disabled={listFiltering.currentPage === listFiltering.numberOfPages}
+        disabled={listFiltering.currentPage === listFiltering.numberOfPages || listFiltering.numberOfPages === 0}
         className={styles.paginationBtn}
         onClick={() => changeCurrentPage(1)}
       >
