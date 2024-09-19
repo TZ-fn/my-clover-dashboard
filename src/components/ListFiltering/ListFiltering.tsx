@@ -17,12 +17,10 @@ export default function ListFiltering() {
 
   return (
     <div className={styles.mainContainer}>
-      <h3>
+      <p className={styles.listFilteringHeader} onClick={() => setAreCheckboxesVisible(!areCheckboxesVisible)}>
         Filtrowanie klientów
-        <button className={styles.toggleCheckboxesBtn} onClick={() => setAreCheckboxesVisible(!areCheckboxesVisible)}>
-          {areCheckboxesVisible ? "▲" : "▼"}
-        </button>
-      </h3>
+        <button className={styles.toggleCheckboxesBtn}>{areCheckboxesVisible ? "▲" : "▼"}</button>
+      </p>
 
       <div className={areCheckboxesVisible ? styles.checkboxesContainer : styles.checkboxesContainerHidden}>
         <label htmlFor="birthday">

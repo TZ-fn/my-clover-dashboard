@@ -7,6 +7,20 @@
   margin-bottom: 1rem;
 }
 
+.listFilteringHeader {
+  font-size: clamp(1rem, 3vw, 1.3rem);
+  cursor: pointer;
+}
+
+.toggleCheckboxesBtn {
+  color: var(--accent-color-vgreen);
+  font-size: 1.5rem;
+  background-color: transparent;
+  margin-left: 0.5rem;
+  transform: translate(0, 2px);
+  cursor: pointer;
+}
+
 .checkboxesContainer,
 .checkboxesContainerHidden {
   display: flex;
@@ -41,13 +55,4 @@
 
 .checkboxesContainerHidden {
   display: none;
-}
-
-.toggleCheckboxesBtn {
-  color: var(--accent-color-vgreen);
-  font-size: 1.5rem;
-  background-color: transparent;
-  margin-left: 0.5rem;
-  transform: translate(0, 2px);
-  cursor: pointer;
 }

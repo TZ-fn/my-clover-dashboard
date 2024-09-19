@@ -21,7 +21,7 @@ export default function PaginationControl() {
         </svg>
       </button>
       {listFiltering.numberOfPages > 0 && (
-        <p>
+        <p className={styles.pagesIndicator}>
           Strona: {listFiltering.currentPage} z {listFiltering.numberOfPages}
         </p>
       )}

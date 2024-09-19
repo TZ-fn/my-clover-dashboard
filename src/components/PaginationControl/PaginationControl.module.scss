@@ -4,6 +4,10 @@
   margin: 2rem;
 }
 
+.pagesIndicator {
+  font-size: clamp(1rem, 3vw, 1.3rem);
+}
+
 .paginationBtn {
   background-color: transparent;
   transform: scale(2);
