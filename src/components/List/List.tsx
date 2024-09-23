@@ -53,29 +53,30 @@ export default function List() {
             </tr>
           </thead>
           <tbody>
-            {filterClients(clientsData, listFiltering).map((client) => {
-              return (
-                <tr key={`${client.firstName}${client.lastName}`}>
-                  <td>
-                    {client.firstName} {client.lastName}
-                  </td>
-                  <td>{client.dob}</td>
-                  <td>{client.phone}</td>
-                  <td>
-                    {client.address.rest}, {client.address.city}
-                  </td>
-                  <td>{client.email}</td>
-                  <td>{client.products}</td>
-                  <td>{client.providers}</td>
-                  <td>
-                    {client.term.startDate} - {client.term.endDate}
-                  </td>
-                  <td>{formatCurrency(Number(client.insuranceSum))}</td>
-                  <td>{client.indemnityTime}</td>
-                  <td>{client.broker}</td>
-                  {client.children && <ChildrenData children={client.children} />}
-                </tr>
-              );
+            {filterClients(clientsData, listFiltering).map((client, i) => {
+              if (i < listFiltering.currentPage * 12)
+                return (
+                  <tr key={`${client.firstName}${client.lastName}`}>
+                    <td>
+                      {client.firstName} {client.lastName}
+                    </td>
+                    <td>{client.dob}</td>
+                    <td>{client.phone}</td>
+                    <td>
+                      {client.address.rest}, {client.address.city}
+                    </td>
+                    <td>{client.email}</td>
+                    <td>{client.products}</td>
+                    <td>{client.providers}</td>
+                    <td>
+                      {client.term.startDate} - {client.term.endDate}
+                    </td>
+                    <td>{formatCurrency(Number(client.insuranceSum))}</td>
+                    <td>{client.indemnityTime}</td>
+                    <td>{client.broker}</td>
+                    {client.children && <ChildrenData children={client.children} />}
+                  </tr>
+                );
             })}
           </tbody>
         </table>
