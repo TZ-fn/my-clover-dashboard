@@ -1,0 +1,1 @@
+export const NUMBER_OF_CLIENTS_PER_PAGE = 12;
