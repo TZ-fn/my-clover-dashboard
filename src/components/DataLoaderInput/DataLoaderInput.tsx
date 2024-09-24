@@ -2,6 +2,7 @@ import { useContext, useId } from "react";
 import styles from "./DataLoaderInput.module.scss";
 import ClientsDataContext from "../../context/ClientsDataContext";
 import ListFilteringContext from "../../context/ListFilteringContext";
+import { NUMBER_OF_CLIENTS_PER_PAGE } from "../../assets/constants";
 
 export default function DataLoaderInput() {
   const fileInputId = useId();
@@ -15,7 +16,7 @@ export default function DataLoaderInput() {
     setClientsData!(JSON.parse(content as string));
     setListFiltering!({
       ...listFiltering,
-      numberOfPages: Number((JSON.parse(content as string)?.length / 12).toFixed()),
+      numberOfPages: Number((JSON.parse(content as string)?.length / NUMBER_OF_CLIENTS_PER_PAGE).toFixed()),
     });
   }
 

@@ -8,6 +8,7 @@ import { Client } from "../../types/Client.js";
 import formatDoB from "../../utilities/formatDoB.js";
 import styles from "./List.module.scss";
 import checkForBirthday from "../../utilities/checkForBirthday.js";
+import { NUMBER_OF_CLIENTS_PER_PAGE } from "../../assets/constants.js";
 
 export default function List() {
   const { clientsData } = useContext(ClientsDataContext);
@@ -54,7 +55,10 @@ export default function List() {
           </thead>
           <tbody>
             {filterClients(clientsData, listFiltering).map((client, i) => {
-              if (i < listFiltering.currentPage * 12)
+              if (
+                i < listFiltering.currentPage * NUMBER_OF_CLIENTS_PER_PAGE &&
+                i >= (listFiltering.currentPage - 1) * NUMBER_OF_CLIENTS_PER_PAGE
+              )
                 return (
                   <tr key={`${client.firstName}${client.lastName}`}>
                     <td>
