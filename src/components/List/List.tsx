@@ -12,7 +12,7 @@ import { NUMBER_OF_CLIENTS_PER_PAGE } from "../../assets/constants.js";
 
 export default function List() {
   const { clientsData } = useContext(ClientsDataContext);
-  const { listFiltering } = useContext(ListFilteringContext);
+  const { listFiltering, setListFiltering } = useContext(ListFilteringContext);
 
   function filterClients(clients: Client[], filteringSettings: ListFilteringSettings) {
     return clients.filter((client) => {
@@ -28,6 +28,10 @@ export default function List() {
       if (filteringSettings.clientsChildren) {
         return client.children.length > 0;
       }
+      setListFiltering!({
+        ...listFiltering,
+        numberOfPages: Number((clients.length / NUMBER_OF_CLIENTS_PER_PAGE).toFixed()),
+      });
       return clients;
     });
   }
