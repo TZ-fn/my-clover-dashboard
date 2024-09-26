@@ -1,4 +1,4 @@
-import { useContext } from "react";
+import { useContext, useEffect, useState } from "react";
 import ClientsDataContext from "../../context/ClientsDataContext.js";
 import formatCurrency from "../../utilities/formatCurrency.js";
 import ChildrenData from "./ChildrenData/ChildrenData.js";
@@ -12,7 +12,14 @@ import { NUMBER_OF_CLIENTS_PER_PAGE } from "../../assets/constants.js";
 
 export default function List() {
   const { clientsData } = useContext(ClientsDataContext);
+  const [filteredClients, setFilteredClients] = useState();
   const { listFiltering, setListFiltering } = useContext(ListFilteringContext);
+
+  useEffect(() => {
+    if (clientsData) {
+      setFilteredClients(filterClients(clientsData, listFiltering));
+    }
+  }, [clientsData, listFiltering]);
 
   function filterClients(clients: Client[], filteringSettings: ListFilteringSettings) {
     return clients.filter((client) => {
@@ -28,10 +35,6 @@ export default function List() {
       if (filteringSettings.clientsChildren) {
         return client.children.length > 0;
       }
-      setListFiltering!({
-        ...listFiltering,
-        numberOfPages: Number((clients.length / NUMBER_OF_CLIENTS_PER_PAGE).toFixed()),
-      });
       return clients;
     });
   }
@@ -58,34 +61,35 @@ export default function List() {
             </tr>
           </thead>
           <tbody>
-            {filterClients(clientsData, listFiltering).map((client, i) => {
-              if (
-                i < listFiltering.currentPage * NUMBER_OF_CLIENTS_PER_PAGE &&
-                i >= (listFiltering.currentPage - 1) * NUMBER_OF_CLIENTS_PER_PAGE
-              )
-                return (
-                  <tr key={`${client.firstName}${client.lastName}`}>
-                    <td>
-                      {client.firstName} {client.lastName}
-                    </td>
-                    <td>{client.dob}</td>
-                    <td>{client.phone}</td>
-                    <td>
-                      {client.address.rest}, {client.address.city}
-                    </td>
-                    <td>{client.email}</td>
-                    <td>{client.products}</td>
-                    <td>{client.providers}</td>
-                    <td>
-                      {client.term.startDate} - {client.term.endDate}
-                    </td>
-                    <td>{formatCurrency(Number(client.insuranceSum))}</td>
-                    <td>{client.indemnityTime}</td>
-                    <td>{client.broker}</td>
-                    {client.children && <ChildrenData children={client.children} />}
-                  </tr>
-                );
-            })}
+            {filteredClients &&
+              filteredClients.map((client, i) => {
+                if (
+                  i < listFiltering.currentPage * NUMBER_OF_CLIENTS_PER_PAGE &&
+                  i >= (listFiltering.currentPage - 1) * NUMBER_OF_CLIENTS_PER_PAGE
+                )
+                  return (
+                    <tr key={`${client.firstName}${client.lastName}`}>
+                      <td>
+                        {client.firstName} {client.lastName}
+                      </td>
+                      <td>{client.dob}</td>
+                      <td>{client.phone}</td>
+                      <td>
+                        {client.address.rest}, {client.address.city}
+                      </td>
+                      <td>{client.email}</td>
+                      <td>{client.products}</td>
+                      <td>{client.providers}</td>
+                      <td>
+                        {client.term.startDate} - {client.term.endDate}
+                      </td>
+                      <td>{formatCurrency(Number(client.insuranceSum))}</td>
+                      <td>{client.indemnityTime}</td>
+                      <td>{client.broker}</td>
+                      {client.children && <ChildrenData children={client.children} />}
+                    </tr>
+                  );
+              })}
           </tbody>
         </table>
       )}
