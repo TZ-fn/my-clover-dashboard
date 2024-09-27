@@ -5,7 +5,10 @@ const ListFilteringContext = createContext<{
   listFiltering: ListFilteringSettings;
   setListFiltering: React.Dispatch<React.SetStateAction<ListFilteringSettings>> | null;
 }>({
-  listFiltering: { searchQuery: "", clientsChildren: false, clientsBirthDay: false, currentPage: 1, numberOfPages: 0 },
+  listFiltering: {
+    settings: { searchQuery: "", clientsChildren: false, clientsBirthDay: false, currentPage: 1 },
+    numberOfPages: 0,
+  },
   setListFiltering: null,
 });
 

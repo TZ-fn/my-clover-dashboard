@@ -7,10 +7,12 @@ interface ListFilteringProviderProps {
 
 export default function ListFilteringProvider({ children }: ListFilteringProviderProps) {
   const [listFiltering, setListFiltering] = useState({
-    searchQuery: "",
-    clientsChildren: false,
-    clientsBirthDay: false,
-    currentPage: 1,
+    settings: {
+      searchQuery: "",
+      clientsChildren: false,
+      clientsBirthDay: false,
+      currentPage: 1,
+    },
     numberOfPages: 0,
   });
 
