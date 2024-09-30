@@ -17,11 +17,16 @@ export default function List() {
 
   useEffect(() => {
     if (clientsData) {
-      setFilteredClients(filterClients(clientsData, listFiltering));
+      const filteredClients = filterClients(clientsData, listFiltering.settings);
+      setFilteredClients(filteredClients);
+      setListFiltering!({
+        ...listFiltering,
+        numberOfPages: Math.ceil(Number(filteredClients.length / NUMBER_OF_CLIENTS_PER_PAGE)),
+      });
     }
-  }, [clientsData, listFiltering]);
+  }, [clientsData, listFiltering.settings]);
 
-  function filterClients(clients: Client[], filteringSettings: ListFilteringSettings) {
+  function filterClients(clients: Client[], filteringSettings: ListFilteringSettings["settings"]) {
     return clients.filter((client) => {
       if (filteringSettings.searchQuery.length > 0) {
         return (
@@ -64,8 +69,8 @@ export default function List() {
             {filteredClients &&
               filteredClients.map((client, i) => {
                 if (
-                  i < listFiltering.currentPage * NUMBER_OF_CLIENTS_PER_PAGE &&
-                  i >= (listFiltering.currentPage - 1) * NUMBER_OF_CLIENTS_PER_PAGE
+                  i < listFiltering.settings.currentPage * NUMBER_OF_CLIENTS_PER_PAGE &&
+                  i >= (listFiltering.settings.currentPage - 1) * NUMBER_OF_CLIENTS_PER_PAGE
                 )
                   return (
                     <tr key={`${client.firstName}${client.lastName}`}>

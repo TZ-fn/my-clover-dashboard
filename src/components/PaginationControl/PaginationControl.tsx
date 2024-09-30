@@ -6,13 +6,16 @@ export default function PaginationControl() {
   const { listFiltering, setListFiltering } = useContext(ListFilteringContext);
 
   function changeCurrentPage(direction: 1 | -1) {
-    setListFiltering!({ ...listFiltering, currentPage: listFiltering.currentPage + direction });
+    setListFiltering!({
+      ...listFiltering,
+      settings: { ...listFiltering.settings, currentPage: listFiltering.settings.currentPage + direction },
+    });
   }
 
   return (
     <div className={styles.container}>
       <button
-        disabled={listFiltering.currentPage === 1 || listFiltering.numberOfPages === 0}
+        disabled={listFiltering.settings.currentPage === 1 || listFiltering.numberOfPages === 0}
         className={styles.paginationBtn}
         onClick={() => changeCurrentPage(-1)}
       >
@@ -22,11 +25,13 @@ export default function PaginationControl() {
       </button>
       {listFiltering.numberOfPages > 0 && (
         <p className={styles.pagesIndicator}>
-          Strona: {listFiltering.currentPage} z {listFiltering.numberOfPages}
+          Strona: {listFiltering.settings.currentPage} z {listFiltering.numberOfPages}
         </p>
       )}
       <button
-        disabled={listFiltering.currentPage === listFiltering.numberOfPages || listFiltering.numberOfPages === 0}
+        disabled={
+          listFiltering.settings.currentPage === listFiltering.numberOfPages || listFiltering.numberOfPages === 0
+        }
         className={styles.paginationBtn}
         onClick={() => changeCurrentPage(1)}
       >

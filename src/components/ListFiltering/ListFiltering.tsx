@@ -8,10 +8,22 @@ export default function ListFiltering() {
 
   function handleInputs(e: ChangeEvent<HTMLInputElement>) {
     if (e.target.id === "birthday") {
-      setListFiltering!({ ...listFiltering, clientsBirthDay: !listFiltering.clientsBirthDay });
+      setListFiltering!({
+        ...listFiltering,
+        settings: {
+          ...listFiltering.settings,
+          clientsBirthDay: !listFiltering.settings.clientsBirthDay,
+        },
+      });
     }
     if (e.target.id === "withChildren") {
-      setListFiltering!({ ...listFiltering, clientsChildren: !listFiltering.clientsChildren });
+      setListFiltering!({
+        ...listFiltering,
+        settings: {
+          ...listFiltering.settings,
+          clientsChildren: !listFiltering.settings.clientsChildren,
+        },
+      });
     }
   }
 
