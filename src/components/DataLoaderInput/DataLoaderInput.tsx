@@ -16,7 +16,7 @@ export default function DataLoaderInput() {
     setClientsData!(JSON.parse(content as string));
     setListFiltering!({
       ...listFiltering,
-      numberOfPages: Number((JSON.parse(content as string)?.length / NUMBER_OF_CLIENTS_PER_PAGE).toFixed()),
+      numberOfPages: Math.ceil(Number(JSON.parse(content as string)?.length / NUMBER_OF_CLIENTS_PER_PAGE)),
     });
   }
 
