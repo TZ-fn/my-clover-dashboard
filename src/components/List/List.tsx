@@ -12,7 +12,7 @@ import { NUMBER_OF_CLIENTS_PER_PAGE } from "../../assets/constants.js";
 
 export default function List() {
   const { clientsData } = useContext(ClientsDataContext);
-  const [filteredClients, setFilteredClients] = useState();
+  const [filteredClients, setFilteredClients] = useState<Client[] | undefined>();
   const { listFiltering, setListFiltering } = useContext(ListFilteringContext);
 
   useEffect(() => {
@@ -24,6 +24,7 @@ export default function List() {
         numberOfPages: Math.ceil(Number(filteredClients.length / NUMBER_OF_CLIENTS_PER_PAGE)),
       });
     }
+    //eslint-disable-next-line
   }, [clientsData, listFiltering.settings]);
 
   function filterClients(clients: Client[], filteringSettings: ListFilteringSettings["settings"]) {
