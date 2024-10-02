@@ -12,6 +12,7 @@ export default function ListFiltering() {
         ...listFiltering,
         settings: {
           ...listFiltering.settings,
+          currentPage: 1,
           clientsBirthDay: !listFiltering.settings.clientsBirthDay,
         },
       });
@@ -21,6 +22,7 @@ export default function ListFiltering() {
         ...listFiltering,
         settings: {
           ...listFiltering.settings,
+          currentPage: 1,
           clientsChildren: !listFiltering.settings.clientsChildren,
         },
       });
