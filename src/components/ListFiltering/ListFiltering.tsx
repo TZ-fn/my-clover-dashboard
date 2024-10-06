@@ -6,27 +6,19 @@ export default function ListFiltering() {
   const [areCheckboxesVisible, setAreCheckboxesVisible] = useState(false);
   const { listFiltering, setListFiltering } = useContext(ListFilteringContext);
 
+  function updateListFiltering(fieldToUpdate: keyof typeof listFiltering.settings) {
+    setListFiltering!({
+      ...listFiltering,
+      settings: {
+        ...listFiltering.settings,
+        currentPage: 1,
+        [fieldToUpdate]: !listFiltering.settings[fieldToUpdate],
+      },
+    });
+  }
+
   function handleInputs(e: ChangeEvent<HTMLInputElement>) {
-    if (e.target.id === "birthday") {
-      setListFiltering!({
-        ...listFiltering,
-        settings: {
-          ...listFiltering.settings,
-          currentPage: 1,
-          clientsBirthDay: !listFiltering.settings.clientsBirthDay,
-        },
-      });
-    }
-    if (e.target.id === "withChildren") {
-      setListFiltering!({
-        ...listFiltering,
-        settings: {
-          ...listFiltering.settings,
-          currentPage: 1,
-          clientsChildren: !listFiltering.settings.clientsChildren,
-        },
-      });
-    }
+    updateListFiltering(e.target.id as keyof typeof listFiltering.settings);
   }
 
   return (
@@ -37,12 +29,12 @@ export default function ListFiltering() {
       </p>
 
       <div className={areCheckboxesVisible ? styles.checkboxesContainer : styles.checkboxesContainerHidden}>
-        <label htmlFor="birthday">
-          <input onChange={(e) => handleInputs(e)} id="birthday" type="checkbox" />
+        <label htmlFor="clientsBirthDay">
+          <input onChange={(e) => handleInputs(e)} id="clientsBirthDay" type="checkbox" />
           Klienci obchodzący dziś urodziny
         </label>
-        <label htmlFor="withChildren">
-          <input onChange={(e) => handleInputs(e)} id="withChildren" type="checkbox" />
+        <label htmlFor="clientsChildren">
+          <input onChange={(e) => handleInputs(e)} id="clientsChildren" type="checkbox" />
           Klienci z dziećmi
         </label>
         <label htmlFor="indemnityMonth">
