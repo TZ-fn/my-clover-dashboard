@@ -52,18 +52,42 @@ export default function List() {
         <table className={styles.table}>
           <thead className={styles.tableHead}>
             <tr>
-              <th className={styles.tableHeadCell}>Imię i Nazwisko</th>
-              <th className={styles.tableHeadCell}>Data urodzenia</th>
-              <th className={styles.tableHeadCell}>Telefon</th>
-              <th className={styles.tableHeadCell}>Adres</th>
-              <th className={styles.tableHeadCell}>Email</th>
-              <th className={styles.tableHeadCell}>Produkty</th>
-              <th className={styles.tableHeadCell}>Provider</th>
-              <th className={styles.tableHeadCell}>Term</th>
-              <th className={styles.tableHeadCell}>Suma Ubezpieczenia</th>
-              <th className={styles.tableHeadCell}>Indemnity</th>
-              <th className={styles.tableHeadCell}>Broker</th>
-              <th className={styles.tableHeadCell}>Dzieci</th>
+              <th data-column="name" className={styles.tableHeadCell}>
+                Imię i Nazwisko
+              </th>
+              <th data-column="dob" className={styles.tableHeadCell}>
+                Data urodzenia
+              </th>
+              <th data-column="phone" className={styles.tableHeadCell}>
+                Telefon
+              </th>
+              <th data-column="address" className={styles.tableHeadCell}>
+                Adres
+              </th>
+              <th data-column="email" className={styles.tableHeadCell}>
+                Email
+              </th>
+              <th data-column="products" className={styles.tableHeadCell}>
+                Produkty
+              </th>
+              <th data-column="provider" className={styles.tableHeadCell}>
+                Provider
+              </th>
+              <th data-column="term" className={styles.tableHeadCell}>
+                Term
+              </th>
+              <th data-column="sum" className={styles.tableHeadCell}>
+                Suma Ubezpieczenia
+              </th>
+              <th data-column="indemnity" className={styles.tableHeadCell}>
+                Indemnity
+              </th>
+              <th data-column="broker" className={styles.tableHeadCell}>
+                Broker
+              </th>
+              <th data-column="children" className={styles.tableHeadCell}>
+                Dzieci
+              </th>
             </tr>
           </thead>
           <tbody>
