@@ -27,10 +27,6 @@ export default function List() {
     //eslint-disable-next-line
   }, [clientsData, listFiltering.settings]);
 
-  function handleHeaderClick(e) {
-    console.log(e.target.dataset.column);
-  }
-
   function filterClients(clients: Client[], filteringSettings: ListFilteringSettings["settings"]) {
     return clients.filter((client) => {
       if (filteringSettings.searchQuery.length > 0) {
@@ -56,40 +52,40 @@ export default function List() {
         <table className={styles.table}>
           <thead className={styles.tableHead}>
             <tr>
-              <th data-column="name" className={styles.tableHeadCell} onClick={(e) => handleHeaderClick(e)}>
+              <th data-column="name" className={styles.tableHeadCell}>
                 Imię i Nazwisko
               </th>
-              <th data-column="dob" className={styles.tableHeadCell} onClick={(e) => handleHeaderClick(e)}>
+              <th data-column="dob" className={styles.tableHeadCell}>
                 Data urodzenia
               </th>
-              <th data-column="phone" className={styles.tableHeadCell} onClick={(e) => handleHeaderClick(e)}>
+              <th data-column="phone" className={styles.tableHeadCell}>
                 Telefon
               </th>
-              <th data-column="address" className={styles.tableHeadCell} onClick={(e) => handleHeaderClick(e)}>
+              <th data-column="address" className={styles.tableHeadCell}>
                 Adres
               </th>
-              <th data-column="email" className={styles.tableHeadCell} onClick={(e) => handleHeaderClick(e)}>
+              <th data-column="email" className={styles.tableHeadCell}>
                 Email
               </th>
-              <th data-column="products" className={styles.tableHeadCell} onClick={(e) => handleHeaderClick(e)}>
+              <th data-column="products" className={styles.tableHeadCell}>
                 Produkty
               </th>
-              <th data-column="provider" className={styles.tableHeadCell} onClick={(e) => handleHeaderClick(e)}>
+              <th data-column="provider" className={styles.tableHeadCell}>
                 Provider
               </th>
-              <th data-column="term" className={styles.tableHeadCell} onClick={(e) => handleHeaderClick(e)}>
+              <th data-column="term" className={styles.tableHeadCell}>
                 Term
               </th>
-              <th data-column="sum" className={styles.tableHeadCell} onClick={(e) => handleHeaderClick(e)}>
+              <th data-column="sum" className={styles.tableHeadCell}>
                 Suma Ubezpieczenia
               </th>
-              <th data-column="indemnity" className={styles.tableHeadCell} onClick={(e) => handleHeaderClick(e)}>
+              <th data-column="indemnity" className={styles.tableHeadCell}>
                 Indemnity
               </th>
-              <th data-column="broker" className={styles.tableHeadCell} onClick={(e) => handleHeaderClick(e)}>
+              <th data-column="broker" className={styles.tableHeadCell}>
                 Broker
               </th>
-              <th data-column="children" className={styles.tableHeadCell} onClick={(e) => handleHeaderClick(e)}>
+              <th data-column="children" className={styles.tableHeadCell}>
                 Dzieci
               </th>
             </tr>
