@@ -22,7 +22,7 @@ export default function SearchBar() {
         className={styles.searchInput}
         name="withChildren"
         type="search"
-        placeholder="Wyszukaj klienta..."
+        placeholder="Wyszukaj po imieniu/nazwisku..."
       />
       <button className={styles.searchBtn}>
         <svg fill=" hsl(0, 0%, 9%);" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50" width="35px" height="35px">
